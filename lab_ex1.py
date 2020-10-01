@@ -1,3 +1,4 @@
+print("Введите число")
 a=int(input())
 c = int(a) % 2
 if a==0:
