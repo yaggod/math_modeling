@@ -1,14 +1,13 @@
+import sys
 print("Введите делимое")
 a=int(input())
 print("Введите делитель")
 b=int(input())
 if b==0:
     print("Делитель равен 0")
-    exit()
+    sys.exit()
 if a%b==0:
     print("Делится нацело")
 else:
-    aaaa="Не делится нацело, остаток равен"
-    print(aaaa, a%b)
-aaaa="Частное равно"
-print(aaaa, int(a/b))
+    print("Не делится нацело, остаток равен", a%b)
+print("Частное равно", int(a/b))
