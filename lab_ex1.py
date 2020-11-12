@@ -1,0 +1,13 @@
+g=float(9.81) # м/с^2
+G=float(6.67*(10*(-11))) # м^3/с^2кг
+lighspeed=float(299792458) # м/c
+MassEarth=float(5.98*(10**24)) # кг
+RdEarth=float(6.37*(10**6)) # м
+MassSun=float(1.98*(10**30)) # кг
+RdSun=float(6.95*(10**8)) # м
+MassMoon=float(7.33*(10**22)) # кг
+RdMoon=float(1.74*(10**6)) # м
+LYear=int(63240) 
+Bolz=(1.380*(10**(-23)))
+Eyl=float(0.577215664901532860606512090082402431042)
+Pln=float(6.62*(10**(-34)))
