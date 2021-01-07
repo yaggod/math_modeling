@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np 
 import math
 from math import pi
 # F = -kv
@@ -19,7 +18,7 @@ def cos(a):
 
 
 
-def tr_plot(v0 = 50, angle = 60, all_time = 100, t_int = 0.00001,Radius = 1, n_vz = 1,mass = 50):
+def tr_plot(v0 = 90, angle = 60, all_time = 100, t_int = 0.001,Radius = 1, n_vz = 1,mass = 50):
     
     k = 6*pi*Radius*n_vz
     amout = int(all_time/t_int)
@@ -32,8 +31,7 @@ def tr_plot(v0 = 50, angle = 60, all_time = 100, t_int = 0.00001,Radius = 1, n_v
     
     for i in range(1,amout):
         # y
-        F = (-k*vy) - mass*g
-        y_acc = F/mass
+        y_acc = ((-k*vy) - mass*g)/mass
         yS = vy*t_int + (y_acc*t_int*t_int)/2
         vy = vy + y_acc*t_int
         y.append(y[i-1] + yS)
@@ -43,7 +41,6 @@ def tr_plot(v0 = 50, angle = 60, all_time = 100, t_int = 0.00001,Radius = 1, n_v
         xS = vx*t_int + (x_acc*t_int*t_int)/2
         vx = vx + x_acc*t_int
         x.append(x[i-1] + xS)
-        
         
         if (y[i] < 0):
             print(y[i])
