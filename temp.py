@@ -43,14 +43,21 @@ def tr_plot(v0 = 90, angle = 60, all_time = 100, t_int = 0.001,Radius = 1, n_vz 
         x.append(x[i-1] + xS)
         
         if (y[i] < 0):
-            print(y[i])
+#            print(y[i])
             break
     
     
     
     plt.plot(x,y)
     plt.show()
+    print("Завершено")
     
     
     
-tr_plot()
+tr_plot(v0 = float(input("Начальная скорость, м/c: ")), 
+        angle = float(input("Начальный угол полета, градусы: ")), 
+        all_time = float(input("Общее время, секунды: ")), 
+        t_int = float(input("Временной интервал, секунды: ")),
+        Radius = float(input("Радиус тела, метры: ")), 
+        n_vz = float(input("Коэффициент вязкости среды, м2/с: ")),
+        mass = float(input("Масса тела, кг: ")))
